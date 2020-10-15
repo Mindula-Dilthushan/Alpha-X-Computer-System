@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="660.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.CustomerFormController">
+   <children>
+      <Pane layoutX="86.0" layoutY="36.0" prefHeight="114.0" prefWidth="286.0" style="-fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30;">
+         <children>
+            <Pane layoutX="6.0" layoutY="5.0" prefHeight="104.0" prefWidth="274.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="73.0" layoutX="20.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/cust.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="112.0" layoutY="42.0" text="Customer gana">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <JFXTextField layoutX="100.0" layoutY="208.0" promptText="Customer ID">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="100.0" layoutY="259.0" promptText="Customer Name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="100.0" layoutY="312.0" promptText="Customer Address">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="100.0" layoutY="366.0" promptText="Customer Contact">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="100.0" layoutY="421.0" promptText="Customer Email">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="330.0" layoutY="251.0" prefHeight="37.0" prefWidth="159.0" text="Save ">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="331.0" layoutY="319.0" prefHeight="37.0" prefWidth="159.0" text="Update">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="331.0" layoutY="390.0" prefHeight="37.0" prefWidth="159.0" text="Delete">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="502.0" layoutY="189.0" prefHeight="315.0" prefWidth="738.0">
+         <columns>
+            <TableColumn prefWidth="82.0" text="ID" />
+            <TableColumn prefWidth="107.0" text="Name" />
+            <TableColumn prefWidth="176.0" text="Address" />
+            <TableColumn prefWidth="141.0" text="Contact" />
+            <TableColumn prefWidth="230.0" text="Email" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

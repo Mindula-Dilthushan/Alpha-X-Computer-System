@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(to left top, #0083ff, #809eff, #b5bcfe, #dedcfe, #ffffff);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane fx:id="anchorMainForm" layoutX="14.0" layoutY="14.0" prefHeight="782.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

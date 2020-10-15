@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashBordFormController">
+   <children>
+      <AnchorPane prefHeight="768.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="5.0" layoutY="95.0" opacity="0.5" prefHeight="667.0" prefWidth="90.0" style="-fx-background-color: blue; -fx-background-radius: 30;" />
+            <JFXButton fx:id="btnExit" buttonType="RAISED" contentDisplay="CENTER" layoutX="13.0" layoutY="685.0" onAction="#btnExitOnAction" prefHeight="60.0" prefWidth="69.0" style="-fx-background-radius: 15; -fx-border-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label layoutX="5.0" layoutY="7.0" opacity="0.5" prefHeight="82.0" prefWidth="1353.0" style="-fx-background-color: BLUE; -fx-background-radius: 30;" text=" " />
+            <AnchorPane fx:id="anchorDashBoard" layoutX="101.0" layoutY="96.0" prefHeight="660.0" prefWidth="1255.0" />
+            <JFXButton fx:id="btnProduct" buttonType="RAISED" contentDisplay="CENTER" layoutX="9.0" layoutY="126.0" onAction="#btnProductOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/product.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnSupplier" buttonType="RAISED" contentDisplay="CENTER" layoutX="9.0" layoutY="233.0" onAction="#btnSupplierOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnCustomer" buttonType="RAISED" contentDisplay="CENTER" layoutX="9.0" layoutY="343.0" onAction="#btnCustomerOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/cust.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnPlaceOrder" buttonType="RAISED" contentDisplay="CENTER" layoutX="8.0" layoutY="567.0" onAction="#btnPlaceOrderOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/shoppin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnSells" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="457.0" onAction="#btnSellsOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/money.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnHome" buttonType="RAISED" contentDisplay="CENTER" layoutX="12.0" layoutY="16.0" onAction="#btnHomeOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/Home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

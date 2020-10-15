@@ -1,6 +1,8 @@
-package entity;
+package entity.custom;
 
-public class Login {
+import entity.SuperEntity;
+
+public class Login implements SuperEntity {
     private int tp;
     private String pw;
 
