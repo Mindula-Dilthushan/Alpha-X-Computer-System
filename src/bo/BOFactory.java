@@ -4,6 +4,7 @@
 package bo;
 
 import bo.custom.impl.LoginBOImpl;
+import bo.custom.impl.ProductBOImpl;
 
 public class BOFactory {
 
@@ -14,12 +15,15 @@ public class BOFactory {
         return (boFactory==null) ? (boFactory = new BOFactory()) : (boFactory);
     }
     public enum BOType{
-        LOGIN
+        LOGIN,
+        PRODUCT
     }
     public <T> T getBO(BOType boType){
         switch (boType){
             case LOGIN:
                 return (T) new LoginBOImpl();
+            case PRODUCT:
+                return (T) new ProductBOImpl();
             default:
                 return null;
         }

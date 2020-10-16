@@ -3,6 +3,7 @@
 package util;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -52,5 +54,9 @@ public class UtilImpl {
     public void btnExit(JFXButton btn) throws Exception {
         Stage exit_stage = (Stage) btn.getScene().getWindow();
         exit_stage.close();
+    }
+    public void textFocusColor(JFXTextField txt)throws Exception{
+        txt.requestFocus();
+        txt.setFocusColor(Paint.valueOf("red"));
     }
 }

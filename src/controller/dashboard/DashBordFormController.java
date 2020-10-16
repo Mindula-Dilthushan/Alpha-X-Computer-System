@@ -14,6 +14,7 @@ public class DashBordFormController implements Initializable {
     public JFXButton btnProduct,btnSupplier,btnCustomer,btnPlaceOrder,btnSells,btnExit;
     public JFXButton btnHome;
 
+    //Property Injection
     UtilImpl util = new UtilImpl();
 
     @Override
@@ -24,14 +25,20 @@ public class DashBordFormController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+
+    public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
+    }
+
+
+
     public void btnSellsOnAction(ActionEvent actionEvent) {
         try {
             util.lordAntoAn(anchorDashBoard,"dashboard/SellsForm.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-    public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
     }
     public void btnCustomerOnAction(ActionEvent actionEvent) {
         try {

@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class LoginBOImpl implements LoginBO {
 
+    //Property Injection
     private LoginDAO loginDAO = DAOFactory.getInstance().getDAO(DAOFactory.DAOType.LOGIN);
 
     @Override

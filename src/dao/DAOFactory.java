@@ -4,6 +4,7 @@
 package dao;
 
 import dao.custom.impl.LoginDAOImpl;
+import dao.custom.impl.ProductDAOImpl;
 
 public class DAOFactory {
 
@@ -14,12 +15,15 @@ public class DAOFactory {
         return (daoFactory == null) ? (daoFactory = new DAOFactory()) : (daoFactory);
     }
     public enum DAOType{
-        LOGIN
+        LOGIN,
+        PRODUCT
     }
     public <T> T getDAO(DAOType daoType){
         switch (daoType){
             case LOGIN:
                 return (T) new LoginDAOImpl();
+            case PRODUCT:
+                return (T) new ProductDAOImpl();
             default:
                 return null;
         }

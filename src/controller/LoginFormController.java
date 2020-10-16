@@ -30,6 +30,7 @@ public class LoginFormController{
     public JFXButton btnLogin;
     public AnchorPane anchorLoginForm;
 
+    //Property Injection
     LoginBO loginBO = BOFactory.getInstance().getBO(BOFactory.BOType.LOGIN);
 
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
@@ -38,20 +39,5 @@ public class LoginFormController{
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        Parent root = FXMLLoader.load(getClass().getResource("/view/dashboard/DashBordForm.fxml"));
-//        Scene scene = btnLogin.getScene();
-//
-//        root.translateXProperty().set(scene.getHeight());
-//
-//        AnchorPane anchorPane = (AnchorPane) scene.getRoot();
-//        anchorPane.getChildren().add(root);
-//
-//        Timeline timeline = new Timeline();
-//        KeyValue keyValue = new KeyValue(root.translateXProperty(),0, Interpolator.EASE_OUT);
-//        KeyFrame keyFrame = new KeyFrame(Duration.seconds(1),keyValue);
-//        timeline.getKeyFrames().add(keyFrame);
-//        timeline.setOnFinished(event -> {
-//            anchorPane.getChildren().remove(anchorLoginForm);
-//        });
     }
 }
