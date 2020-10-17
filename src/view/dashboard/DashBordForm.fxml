@@ -13,7 +13,7 @@
    <children>
       <AnchorPane prefHeight="768.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="5.0" layoutY="95.0" opacity="0.5" prefHeight="667.0" prefWidth="90.0" style="-fx-background-color: blue; -fx-background-radius: 30;" />
+            <Label layoutX="5.0" layoutY="95.0" prefHeight="667.0" prefWidth="90.0" style="-fx-background-color: #7579e7; -fx-background-radius: 30;" />
             <JFXButton fx:id="btnExit" buttonType="RAISED" contentDisplay="CENTER" layoutX="13.0" layoutY="685.0" onAction="#btnExitOnAction" prefHeight="60.0" prefWidth="69.0" style="-fx-background-radius: 15; -fx-border-radius: 15;" text=" ">
                <graphic>
                   <ImageView fitHeight="59.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
@@ -31,7 +31,7 @@
                   </LinearGradient>
                </ripplerFill>
             </JFXButton>
-            <Label layoutX="5.0" layoutY="7.0" opacity="0.5" prefHeight="82.0" prefWidth="1353.0" style="-fx-background-color: BLUE; -fx-background-radius: 30;" text=" " />
+            <Label layoutX="5.0" layoutY="7.0" prefHeight="82.0" prefWidth="1353.0" style="-fx-background-color: #7579e7; -fx-background-radius: 30;" text=" " />
             <AnchorPane fx:id="anchorDashBoard" layoutX="101.0" layoutY="96.0" prefHeight="660.0" prefWidth="1255.0" />
             <JFXButton fx:id="btnProduct" buttonType="RAISED" contentDisplay="CENTER" layoutX="9.0" layoutY="126.0" onAction="#btnProductOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
                <graphic>

@@ -10,6 +10,11 @@
       <w>pqty</w>
       <w>prodto</w>
       <w>prodtosearch</w>
+      <w>saddress</w>
+      <w>scontact</w>
+      <w>semail</w>
+      <w>sname</w>
+      <w>supsearch</w>
       <w>tele</w>
     </words>
   </dictionary>

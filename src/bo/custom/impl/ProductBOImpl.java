@@ -1,3 +1,6 @@
+//Alpha-X-Computer-System
+//Software Design Alpha X Software Solution
+//10-16-20
 package bo.custom.impl;
 
 import bo.custom.ProductBO;
@@ -94,7 +97,6 @@ public class ProductBOImpl implements ProductBO {
     public int sumProductQty() throws Exception {
         return productDAO.sumProductQty();
     }
-
     @Override
     public String getListener() throws Exception {
         return productDAO.getListener();

@@ -1,3 +1,6 @@
+//Alpha-X-Computer-System
+//Software Design Alpha X Software Solution
+//10-15-20
 package bo.custom.impl;
 
 import bo.custom.LoginBO;

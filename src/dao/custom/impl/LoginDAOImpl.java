@@ -51,4 +51,5 @@ public class LoginDAOImpl implements LoginDAO {
     public List<Login> getAll() throws Exception {
         return null;
     }
+
 }

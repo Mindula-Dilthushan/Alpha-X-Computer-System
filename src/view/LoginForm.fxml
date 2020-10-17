@@ -100,7 +100,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Label layoutX="563.0" layoutY="657.0" text="  Design By Alpha X Software Solution">
+            <Label layoutX="564.0" layoutY="649.0" text="  Design By Alpha X Software Solution">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
@@ -108,7 +108,7 @@
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
             </Label>
-            <Label layoutX="560.0" layoutY="635.0" text="© 2020 Login Form. All Right Reserved">
+            <Label layoutX="561.0" layoutY="627.0" text="© 2020 Login Form. All Right Reserved">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
