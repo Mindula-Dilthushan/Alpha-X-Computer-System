@@ -3,6 +3,7 @@
 //10-15-20
 package bo;
 
+import bo.custom.impl.CustomerBOImpl;
 import bo.custom.impl.LoginBOImpl;
 import bo.custom.impl.ProductBOImpl;
 import bo.custom.impl.SupplierBOImpl;
@@ -18,7 +19,8 @@ public class BOFactory {
     public enum BOType{
         LOGIN,
         PRODUCT,
-        SUPPLIER
+        SUPPLIER,
+        CUSTOMER
     }
     public <T> T getBO(BOType boType){
         switch (boType){
@@ -28,6 +30,8 @@ public class BOFactory {
                 return (T) new ProductBOImpl();
             case SUPPLIER:
                 return (T) new SupplierBOImpl();
+            case CUSTOMER:
+                return (T) new CustomerBOImpl();
             default:
                 return null;
         }

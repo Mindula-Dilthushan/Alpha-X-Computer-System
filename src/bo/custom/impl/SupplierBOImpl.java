@@ -91,8 +91,4 @@ public class SupplierBOImpl implements SupplierBO {
     public int getSupCount() throws Exception {
         return supplierDAO.getSupCount();
     }
-    @Override
-    public int sumSup() throws Exception {
-        return supplierDAO.sumSup();
-    }
 }

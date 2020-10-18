@@ -12,5 +12,4 @@ public interface SupplierBO {
     public ArrayList<SupplierDTO> getAllSupplier() throws Exception;
     public String getListener() throws Exception;
     public int getSupCount() throws Exception;
-    public int sumSup() throws Exception;
 }

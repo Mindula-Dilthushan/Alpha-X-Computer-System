@@ -68,7 +68,7 @@ public class SupplierFormController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        getProductSearching();
+        getSupSearching();
         searchCont();
         setSupId();
 
@@ -312,7 +312,7 @@ public class SupplierFormController implements Initializable {
         }
     }
     //Searching =======================================================================================
-    private void getProductSearching() {
+    private void getSupSearching() {
         try {
             supArr = new ArrayList<>();
             supsearch = supplierBO.getAllSupplier();

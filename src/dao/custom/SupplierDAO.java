@@ -10,5 +10,4 @@ public interface SupplierDAO extends CrudDAO<Supplier,String> {
     public Supplier getSupCont(String cont) throws Exception;
     public String getListener() throws Exception;
     public int getSupCount() throws Exception;
-    public int sumSup() throws Exception;
 }

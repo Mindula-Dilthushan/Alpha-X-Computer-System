@@ -84,7 +84,6 @@ public class SupplierDAOImpl implements SupplierDAO {
             return null;
         }
     }
-
     @Override
     public String getListener() throws Exception {
         ResultSet set = CrudUtil.execute("SELECT sid FROM supplier ORDER BY sid DESC LIMIT 1");
@@ -99,23 +98,12 @@ public class SupplierDAOImpl implements SupplierDAO {
         }
         return sid;
     }
-
     @Override
     public int getSupCount() throws Exception {
         String SQL = "SELECT COUNT(sid) FROM supplier";
         ResultSet rst = CrudUtil.execute(SQL);
         if (rst.next()){
             return rst.getInt(1);
-        }
-        return 0;
-    }
-
-    @Override
-    public int sumSup() throws Exception {
-        String getIncome = "SELECT SUM(sid) as getAll FROM supplier";
-        ResultSet resultSet = CrudUtil.execute(getIncome);
-        if(resultSet.next()){
-            return resultSet.getInt(1);
         }
         return 0;
     }

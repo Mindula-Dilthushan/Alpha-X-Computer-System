@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +13,6 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="660.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.CustomerFormController">
    <children>
@@ -25,41 +25,41 @@
                         <Image url="@../../asserts/cust.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="112.0" layoutY="42.0" text="Customer gana">
+                  <Label fx:id="lblTotCust" layoutX="137.0" layoutY="38.0" prefHeight="29.0" prefWidth="53.0" text="   ">
                      <font>
-                        <Font name="Times New Roman Bold" size="20.0" />
+                        <Font name="Times New Roman Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
          </children>
       </Pane>
-      <JFXTextField layoutX="100.0" layoutY="208.0" promptText="Customer ID">
+      <JFXTextField fx:id="txtCid" layoutX="100.0" layoutY="208.0" onAction="#txtCIdOnAction" promptText="Customer ID">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField layoutX="100.0" layoutY="259.0" promptText="Customer Name">
+      <JFXTextField fx:id="txtCName" layoutX="100.0" layoutY="259.0" promptText="Customer Name">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField layoutX="100.0" layoutY="312.0" promptText="Customer Address">
+      <JFXTextField fx:id="txtCAdd" layoutX="100.0" layoutY="312.0" promptText="Customer Address">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField layoutX="100.0" layoutY="366.0" promptText="Customer Contact">
+      <JFXTextField fx:id="txtCCont" layoutX="100.0" layoutY="366.0" promptText="Customer Contact">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField layoutX="100.0" layoutY="421.0" promptText="Customer Email">
+      <JFXTextField fx:id="txtCEmail" layoutX="100.0" layoutY="421.0" promptText="Customer Email">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="330.0" layoutY="251.0" prefHeight="37.0" prefWidth="159.0" text="Save ">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="330.0" layoutY="251.0" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="159.0" text="Save ">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -72,7 +72,7 @@
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="331.0" layoutY="319.0" prefHeight="37.0" prefWidth="159.0" text="Update">
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="331.0" layoutY="319.0" onAction="#btnUpdateOnAction" prefHeight="37.0" prefWidth="159.0" text="Update">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -85,7 +85,7 @@
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="331.0" layoutY="390.0" prefHeight="37.0" prefWidth="159.0" text="Delete">
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="331.0" layoutY="390.0" onAction="#btnDeleteOnAction" prefHeight="37.0" prefWidth="159.0" text="Delete">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -98,14 +98,24 @@
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </JFXButton>
-      <TableView layoutX="502.0" layoutY="189.0" prefHeight="315.0" prefWidth="738.0">
+      <TableView fx:id="tblCustomer" layoutX="502.0" layoutY="189.0" prefHeight="315.0" prefWidth="738.0">
          <columns>
-            <TableColumn prefWidth="82.0" text="ID" />
-            <TableColumn prefWidth="107.0" text="Name" />
-            <TableColumn prefWidth="176.0" text="Address" />
-            <TableColumn prefWidth="141.0" text="Contact" />
-            <TableColumn prefWidth="230.0" text="Email" />
+            <TableColumn fx:id="colID" prefWidth="82.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="107.0" text="Name" />
+            <TableColumn fx:id="colAdd" prefWidth="176.0" text="Address" />
+            <TableColumn fx:id="colCont" prefWidth="141.0" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="230.0" text="Email" />
          </columns>
       </TableView>
+      <TextField fx:id="txtSeaCont" layoutX="996.0" layoutY="141.0" onAction="#txtSeaContOnAction" prefHeight="31.0" prefWidth="181.0" promptText="Contact">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="1191.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/search.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
