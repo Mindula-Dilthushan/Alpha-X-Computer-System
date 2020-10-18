@@ -3,10 +3,7 @@
 //10-15-20
 package dao;
 
-import dao.custom.impl.CustomerDAOImpl;
-import dao.custom.impl.LoginDAOImpl;
-import dao.custom.impl.ProductDAOImpl;
-import dao.custom.impl.SupplierDAOImpl;
+import dao.custom.impl.*;
 
 public class DAOFactory {
 
@@ -20,7 +17,11 @@ public class DAOFactory {
         LOGIN,
         PRODUCT,
         SUPPLIER,
-        CUSTOMER
+        CUSTOMER,
+        SUPPLIERORDER,
+        SUPPLIERORDERDETAIL,
+        OUTPAYMENT,
+
     }
     public <T> T getDAO(DAOType daoType){
         switch (daoType){
@@ -32,6 +33,12 @@ public class DAOFactory {
                 return (T) new SupplierDAOImpl();
             case CUSTOMER:
                 return (T) new CustomerDAOImpl();
+            case SUPPLIERORDER:
+                return (T) new SupplierOrderDAOImpl();
+            case SUPPLIERORDERDETAIL:
+                return (T) new SupplierOrderDetailDAOImpl();
+            case OUTPAYMENT:
+                return (T) new OutPaymentDAOImpl();
             default:
                 return null;
         }

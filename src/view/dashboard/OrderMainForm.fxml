@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="660.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.OrderMainFormController">
+   <children>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" layoutX="332.0" layoutY="10.0" style="-fx-background-radius: 25; -fx-border-radius: 25;" text="Supplier Order">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/suporder.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" layoutX="756.0" layoutY="12.0" prefHeight="107.0" prefWidth="168.0" style="-fx-background-radius: 25; -fx-border-radius: 25;" text="Customer Order">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/custorder.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <Separator layoutX="131.0" layoutY="126.0" prefHeight="2.0" prefWidth="994.0" />
+      <AnchorPane fx:id="anchorOrderForm" layoutX="8.0" layoutY="133.0" prefHeight="520.0" prefWidth="1240.0" />
+      <Label layoutX="32.0" layoutY="23.0" text="Payment ID :">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOutPayID" editable="false" focusTraversable="false" layoutX="160.0" layoutY="18.0" prefHeight="31.0" prefWidth="136.0" promptText="Payment ID">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="33.0" layoutY="77.0" text="Order ID :">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSupOrderID" editable="false" focusTraversable="false" layoutX="160.0" layoutY="72.0" prefHeight="31.0" prefWidth="136.0" promptText="OrderID">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="970.0" layoutY="23.0" text="Payment ID :">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIncomeID" editable="false" focusTraversable="false" layoutX="1098.0" layoutY="18.0" prefHeight="31.0" prefWidth="136.0" promptText="Payment ID">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="971.0" layoutY="77.0" text="Order ID :">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustOrderID" editable="false" focusTraversable="false" layoutX="1098.0" layoutY="72.0" prefHeight="31.0" prefWidth="136.0" promptText="OrderID">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

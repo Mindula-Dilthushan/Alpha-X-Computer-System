@@ -57,35 +57,36 @@ public class CustomerFormController implements Initializable {
         colEmail.setCellValueFactory(new PropertyValueFactory("custEmail"));
 
         tblCustomer.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    setTableToData(newValue);
+                (observable, oldValue, newValue) -> { setTableToData(newValue);
                 });
 
         try {
-            loadSupplier();
+            loadCustomer();
             loadId();
             sumCust();
         } catch (Exception e) {
-            e.printStackTrace();
         }
         getCustSearching();
         searchCont();
         setCustId();
     }
     //lord-table-data===============================================================================
-    private void loadSupplier() throws Exception {
-        ObservableList<CustomerTM> customerTMObservableList = FXCollections.observableArrayList();
-        List<CustomerDTO> customerDTOList= customerBO.getAllCustomer();
-        for (CustomerDTO customerDTO : customerDTOList) {
-            CustomerTM tm = new CustomerTM(
-                    customerDTO.getCid(),
-                    customerDTO.getCname(),
-                    customerDTO.getCaddress(),
-                    customerDTO.getCcontact(),
-                    customerDTO.getCemail()
-            );
-            customerTMObservableList.add(tm);
-            tblCustomer.setItems(customerTMObservableList);
+    private void loadCustomer() throws Exception {
+        try {
+            ObservableList<CustomerTM> customerTMObservableList = FXCollections.observableArrayList();
+            List<CustomerDTO> customerDTOList= customerBO.getAllCustomer();
+            for (CustomerDTO customerDTO : customerDTOList) {
+                CustomerTM tm = new CustomerTM(
+                        customerDTO.getCid(),
+                        customerDTO.getCname(),
+                        customerDTO.getCaddress(),
+                        customerDTO.getCcontact(),
+                        customerDTO.getCemail()
+                );
+                customerTMObservableList.add(tm);
+                tblCustomer.setItems(customerTMObservableList);
+        }
+        }catch (Exception e){
         }
     }
     //set Listener------------------------------------------------------------------------
@@ -155,7 +156,7 @@ public class CustomerFormController implements Initializable {
                     if (result.orElse(no) == ok) {
                         if (customerBO.deleteCustomer(txtCid.getText())) {
                             util.ImgNotification("asserts/ok.png", "Success", "Customer deleted");
-                            loadSupplier();
+                            loadCustomer();
                             ClearTxt();
                             sumCust();
                             return;
@@ -233,9 +234,13 @@ public class CustomerFormController implements Initializable {
                                 )
                         )
                         ) util.ImgNotification("asserts/ok.png", "Success", "Customer Updated");
-                        ClearTxt();
-                        loadSupplier();
+
+                        try{
+                            loadCustomer();
+                        }catch (Exception e){
+                        }
                         sumCust();
+                        ClearTxt();
                         return;
                     }else{
                         //no
@@ -307,7 +312,7 @@ public class CustomerFormController implements Initializable {
                     System.out.println("no");
                 }
                 ClearTxt();
-                loadSupplier();
+                loadCustomer();
                 sumCust();
             } catch (Exception e) {
             }

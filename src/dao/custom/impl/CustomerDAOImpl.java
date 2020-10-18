@@ -31,11 +31,11 @@ public class CustomerDAOImpl implements CustomerDAO {
     @Override
     public boolean update(Customer customer) throws Exception {
         return CrudUtil.execute(" UPDATE customer SET cname=?,caddress=?,ccontact=?,cemail=? WHERE cid=?",
-                customer.getCid(),
                 customer.getCname(),
                 customer.getCaddress(),
                 customer.getCcontact(),
-                customer.getCemail()
+                customer.getCemail(),
+                customer.getCid()
         );
     }
     @Override
@@ -89,15 +89,15 @@ public class CustomerDAOImpl implements CustomerDAO {
     public String getListener() throws Exception {
         ResultSet set = CrudUtil.execute("SELECT cid FROM customer ORDER BY cid DESC LIMIT 1");
         String cid="C001";
-        if (set.next()){
-            String temp=set.getString(1);
-            String[] cs = temp.split("C");
-            int selectedId=Integer.parseInt(cs[1]);
-            if (selectedId>10){
-                cid="C0"+(selectedId+1);
+            if (set.next()){
+                String temp=set.getString(1);
+                String[] cs = temp.split("C");
+                int selectedId=Integer.parseInt(cs[1]);
+                if (selectedId>10){
+                    cid="C0"+(selectedId+1);
+                }
             }
-        }
-        return cid;
+            return cid;
     }
     @Override
     public int getCustCount() throws Exception {

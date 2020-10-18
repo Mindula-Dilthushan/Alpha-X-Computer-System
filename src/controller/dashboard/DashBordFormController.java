@@ -25,14 +25,13 @@ public class DashBordFormController implements Initializable {
             e.printStackTrace();
         }
     }
-
-
-
     public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
+        try {
+            util.lordAntoAn(anchorDashBoard,"dashboard/OrderMainForm.fxml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
-
-
     public void btnSellsOnAction(ActionEvent actionEvent) {
         try {
             util.lordAntoAn(anchorDashBoard,"dashboard/SellsForm.fxml");

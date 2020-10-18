@@ -4,6 +4,8 @@
       <w>anto</w>
       <w>cust</w>
       <w>iand</w>
+      <w>opid</w>
+      <w>outpayment</w>
       <w>pbrand</w>
       <w>pdesc</w>
       <w>pname</w>
@@ -15,6 +17,9 @@
       <w>scontact</w>
       <w>semail</w>
       <w>sname</w>
+      <w>soid</w>
+      <w>supplierorder</w>
+      <w>supplierorderdetail</w>
       <w>supsearch</w>
       <w>tele</w>
     </words>

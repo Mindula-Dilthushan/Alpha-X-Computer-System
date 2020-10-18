@@ -24,6 +24,34 @@ CREATE TABLE supplier(
     semail VARCHAR(30)NOT NULL,
     CONSTRAINT PRIMARY KEY(sid)
 );
+CREATE TABLE supplierOrder(
+    soid VARCHAR(5)NOT NULL,
+    sid VARCHAR(5)NOT NULL,
+    sodate DATE NOT NULL,
+    CONSTRAINT PRIMARY KEY(soid),
+    CONSTRAINT FOREIGN KEY (sid) REFERENCES supplier(sid) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE supplierOrderDetail(
+    soid VARCHAR(5)NOT NULL,
+    pid VARCHAR(5)NOT NULL,
+    sodQty DATE NOT NULL,
+    sodPrice DOUBLE(10,2) NOT NULL,
+    CONSTRAINT PRIMARY KEY(soid,pid),
+    CONSTRAINT FOREIGN KEY (soid) REFERENCES supplierOrder(soid) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (pid) REFERENCES product(pid) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE outPayment(
+    opid VARCHAR(5)NOT NULL,
+    soid VARCHAR(5)NOT NULL,
+    pid VARCHAR(5)NOT NULL,
+    opDate DATE NOT NULL,
+    opPrice DOUBLE (10,2) NOT NULL,
+    CONSTRAINT PRIMARY KEY(opid),
+    CONSTRAINT FOREIGN KEY (soid) REFERENCES supplierOrder(soid) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (pid) REFERENCES product(pid) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
 CREATE TABLE customer(
     cid VARCHAR(5)NOT NULL,
     cname VARCHAR(30)NOT NULL,
@@ -32,7 +60,6 @@ CREATE TABLE customer(
     cemail VARCHAR(30)NOT NULL,
     CONSTRAINT PRIMARY KEY(cid)
 );
-
 
 SHOW TABLES;
 
@@ -48,9 +75,16 @@ INSERT INTO customer VALUES
 DESC login;
 DESC product;
 DESC supplier;
+DESC supplierOrder;
+DESC supplierOrderDetail;
+DESC outPayment;
 DESC customer;
+
 
 SELECT * FROM login;
 SELECT * FROM product;
 SELECT * FROM supplier;
+SELECT * FROM supplierOrder;
+SELECT * FROM supplierOrderDetail;
+SELECT * FROM outPayment;
 SELECT * FROM customer;

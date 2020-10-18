@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="520.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.SupplierOrderFormController">
+   <children>
+      <JFXTextField fx:id="txtSupID" labelFloat="true" layoutX="31.0" layoutY="55.0" onAction="#txtSupIDOnAction" prefHeight="32.0" prefWidth="162.0" promptText="Supplier ID">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSupName" labelFloat="true" layoutX="31.0" layoutY="118.0" promptText="Supplier Name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSupCont" labelFloat="true" layoutX="31.0" layoutY="182.0" promptText="Supplier Contact">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProID" labelFloat="true" layoutX="279.0" layoutY="55.0" onAction="#txtProIDOnAction" prefHeight="32.0" prefWidth="173.0" promptText="Product ID">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProBrand" labelFloat="true" layoutX="279.0" layoutY="118.0" promptText="Product Brand">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProName" labelFloat="true" layoutX="279.0" layoutY="183.0" promptText="Product Name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProDesc" labelFloat="true" layoutX="279.0" layoutY="246.0" promptText="Product Description">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProPrice" labelFloat="true" layoutX="279.0" layoutY="307.0" promptText="Product Price">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXTextField>
+      <TextField fx:id="txtQtyOnHand" layoutX="571.0" layoutY="90.0" prefHeight="32.0" prefWidth="69.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="32.0" fitWidth="40.0" layoutX="201.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="40.0" layoutX="458.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/search.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="251.0" layoutY="86.0" orientation="VERTICAL" prefHeight="254.0" prefWidth="1.0" />
+      <Separator layoutX="511.0" layoutY="88.0" orientation="VERTICAL" prefHeight="254.0" prefWidth="1.0" />
+      <Separator layoutX="38.0" layoutY="449.0" prefHeight="6.0" prefWidth="1165.0" />
+      <JFXButton fx:id="btnSupClear" buttonType="RAISED" layoutX="52.0" layoutY="381.0" onAction="#btnSupClearOnAction" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 25; -fx-border-radius: 25;" text="Clear">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00efff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnProClear" buttonType="RAISED" layoutX="300.0" layoutY="381.0" onAction="#btnProClearOnAction" prefHeight="31.0" prefWidth="162.0" style="-fx-background-radius: 25; -fx-border-radius: 25;" text="Clear">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#00ff77" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOutCome" layoutX="705.0" layoutY="88.0" prefHeight="230.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="colOtp" prefWidth="75.0" text="OTP" />
+          <TableColumn fx:id="colOrid" prefWidth="81.0" text="ORID" />
+            <TableColumn fx:id="colSid" prefWidth="81.0" text="SID" />
+            <TableColumn fx:id="colPid" prefWidth="81.0" text="PID" />
+            <TableColumn fx:id="colQty" prefWidth="55.0" text="QTY" />
+            <TableColumn fx:id="colQtyTotal" prefWidth="150.0" text="Total" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnPlus" buttonType="RAISED" contentDisplay="CENTER" layoutX="650.0" layoutY="87.0" onAction="#btnPlusOnAction" prefHeight="32.0" prefWidth="32.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00ff1e" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btnMin" buttonType="RAISED" contentDisplay="CENTER" layoutX="517.0" layoutY="86.0" onAction="#btnMinOnAction" prefHeight="32.0" prefWidth="32.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/min.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <Separator layoutX="693.0" layoutY="90.0" orientation="VERTICAL" prefHeight="254.0" prefWidth="1.0" />
+      <Label fx:id="lblCustomTotal" layoutX="528.0" layoutY="167.0" prefHeight="31.0" prefWidth="155.0" text="      0">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="135.0" text="Custom Total">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtAllTotal" layoutX="771.0" layoutY="335.0" prefHeight="31.0" prefWidth="134.0" text=" 0" textFill="RED">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="705.0" layoutY="339.0" text="Total :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPayNow" buttonType="RAISED" contentDisplay="CENTER" layoutX="1144.0" layoutY="368.0" onAction="#btnPayNowOnAction" prefHeight="53.0" prefWidth="57.0" style="-fx-background-radius: 40;" text=" ">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/payfinish.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <RadioButton fx:id="cash" contentDisplay="RIGHT" layoutX="928.0" layoutY="374.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/cash.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <toggleGroup>
+            <ToggleGroup fx:id="rbtnPayType" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="928.0" layoutY="341.0" text="How Would you like to pay ?">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="915.0" layoutY="333.0" orientation="VERTICAL" prefHeight="101.0" prefWidth="6.0" />
+      <RadioButton fx:id="rbtncard" contentDisplay="RIGHT" layoutX="1041.0" layoutY="374.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" toggleGroup="$rbtnPayType">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/card.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </RadioButton>
+      <Separator layoutX="1129.0" layoutY="339.0" orientation="VERTICAL" prefHeight="101.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>
