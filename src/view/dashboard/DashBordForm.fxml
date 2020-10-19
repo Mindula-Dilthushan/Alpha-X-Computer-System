@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +14,7 @@
    <children>
       <AnchorPane prefHeight="768.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="5.0" layoutY="95.0" prefHeight="667.0" prefWidth="90.0" style="-fx-background-color: #7579e7; -fx-background-radius: 30;" />
+            <Label layoutX="5.0" layoutY="95.0" prefHeight="667.0" prefWidth="90.0" style="-fx-background-color: #40a8c4; -fx-background-radius: 30;" />
             <JFXButton fx:id="btnExit" buttonType="RAISED" contentDisplay="CENTER" layoutX="13.0" layoutY="685.0" onAction="#btnExitOnAction" prefHeight="60.0" prefWidth="69.0" style="-fx-background-radius: 15; -fx-border-radius: 15;" text=" ">
                <graphic>
                   <ImageView fitHeight="59.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
@@ -31,7 +32,7 @@
                   </LinearGradient>
                </ripplerFill>
             </JFXButton>
-            <Label layoutX="5.0" layoutY="7.0" prefHeight="82.0" prefWidth="1353.0" style="-fx-background-color: #7579e7; -fx-background-radius: 30;" text=" " />
+            <Label layoutX="5.0" layoutY="7.0" prefHeight="82.0" prefWidth="1353.0" style="-fx-background-color: #40a8c4; -fx-background-radius: 30;" text=" " />
             <AnchorPane fx:id="anchorDashBoard" layoutX="101.0" layoutY="96.0" prefHeight="660.0" prefWidth="1255.0" />
             <JFXButton fx:id="btnProduct" buttonType="RAISED" contentDisplay="CENTER" layoutX="9.0" layoutY="126.0" onAction="#btnProductOnAction" prefHeight="65.0" prefWidth="81.0" style="-fx-border-radius: 15; -fx-background-radius: 15;" text=" ">
                <graphic>
@@ -153,6 +154,40 @@
                   </LinearGradient>
                </ripplerFill>
             </JFXButton>
+            <Label fx:id="lblTime" layoutX="167.0" layoutY="33.0" text="00:00" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="28.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label fx:id="lblDate" layoutX="1146.0" layoutY="33.0" text="2020 : 10 : 19" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="28.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label layoutX="563.0" layoutY="29.0" text="Alpha X Computer System">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="72.0" layoutX="488.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

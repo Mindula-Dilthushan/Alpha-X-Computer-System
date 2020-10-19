@@ -24,9 +24,9 @@
                         <Image url="@../../asserts/cust.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="112.0" layoutY="42.0" text="Customers Gana">
+                  <Label fx:id="lblTodayCustOrd" layoutX="137.0" layoutY="38.0" text="1">
                      <font>
-                        <Font name="Times New Roman Bold" size="20.0" />
+                        <Font name="Times New Roman Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
@@ -42,9 +42,9 @@
                         <Image url="@../../asserts/product.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="112.0" layoutY="42.0" text="Product vikunapuwa">
+                  <Label fx:id="lblTodayProdu" layoutX="137.0" layoutY="38.0" text="10">
                      <font>
-                        <Font name="Times New Roman Bold" size="20.0" />
+                        <Font name="Times New Roman Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
@@ -60,9 +60,9 @@
                         <Image url="@../../asserts/supplierorder.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="112.0" layoutY="42.0" text="Sup Order">
+                  <Label fx:id="lblTodaySupOrde" layoutX="137.0" layoutY="38.0" text="1">
                      <font>
-                        <Font name="Times New Roman Bold" size="20.0" />
+                        <Font name="Times New Roman Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
@@ -70,9 +70,9 @@
          </children>
       </Pane>
       <Separator layoutX="27.0" layoutY="181.0" prefHeight="3.0" prefWidth="1202.0" />
-      <BorderPane layoutX="51.0" layoutY="249.0" prefHeight="364.0" prefWidth="630.0">
+      <BorderPane fx:id="borderPane0" layoutX="51.0" layoutY="249.0" prefHeight="364.0" prefWidth="630.0">
          <center>
-            <LineChart BorderPane.alignment="CENTER">
+            <LineChart fx:id="lineChart" BorderPane.alignment="CENTER">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -82,9 +82,9 @@
             </LineChart>
          </center>
       </BorderPane>
-      <BorderPane layoutX="790.0" layoutY="249.0" prefHeight="364.0" prefWidth="420.0">
+      <BorderPane fx:id="borderPane1" layoutX="790.0" layoutY="249.0" prefHeight="364.0" prefWidth="420.0">
          <center>
-            <PieChart BorderPane.alignment="CENTER" />
+            <PieChart fx:id="pieChart" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>

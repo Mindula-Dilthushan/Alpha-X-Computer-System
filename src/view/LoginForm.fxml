@@ -5,6 +5,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,9 +19,9 @@
    <children>
       <AnchorPane fx:id="anchorLoginForm" layoutX="53.0" layoutY="50.0" prefHeight="768.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane layoutX="460.0" layoutY="150.0" prefHeight="466.0" prefWidth="445.0" style="-fx-background-color: black; -fx-background-radius: 30;">
+            <Pane layoutX="460.0" layoutY="150.0" opacity="0.5" prefHeight="466.0" prefWidth="445.0" style="-fx-background-color: #40a8c4; -fx-background-radius: 30;">
                <effect>
-                  <Shadow blurType="ONE_PASS_BOX" color="LIGHTGRAY" height="15.0" radius="7.0" width="15.0" />
+                  <Shadow color="#40a8c4" />
                </effect>
             </Pane>
             <Pane layoutX="460.0" layoutY="150.0" prefHeight="466.0" prefWidth="445.0">
@@ -98,6 +99,10 @@
                         <Image url="@../asserts/password.png" />
                      </image>
                   </ImageView>
+                  <Separator layoutX="48.0" layoutY="13.0" prefHeight="3.0" prefWidth="349.0" />
+                  <Separator layoutX="48.0" layoutY="446.0" prefHeight="3.0" prefWidth="349.0" />
+                  <Separator layoutX="14.0" layoutY="36.0" orientation="VERTICAL" prefHeight="395.0" prefWidth="0.0" />
+                  <Separator layoutX="428.0" layoutY="37.0" orientation="VERTICAL" prefHeight="395.0" prefWidth="0.0" />
                </children>
             </Pane>
             <Label layoutX="564.0" layoutY="649.0" text="  Design By Alpha X Software Solution">
