@@ -13,7 +13,7 @@ git clone https://github.com/Mindula-Dilthushan/Alpha-X-Computer-System.git
 ![GitHub Contributions](https://img.shields.io/github/contributors/Mindula-Dilthushan/Alpha-X-Computer-System?&labelColor=black&color=8854d0&style=for-the-badge)
 
 ### License 📝
-[![GitHub license](https://img.shields.io/github/license/Mindula-Dilthushan/Alpha-X-Computer-System?&labelColor=black&color=3867d6&style=for-the-badge)](https://github.com/Mindula-Dilthushan/Red-Alpha-Assistant-Bot/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Mindula-Dilthushan/Alpha-X-Computer-System?&labelColor=black&color=3867d6&style=for-the-badge)](https://github.com/Mindula-Dilthushan/Alpha-X-Computer-System/blob/license/LICENSE)
 
 <div align="center">
 
